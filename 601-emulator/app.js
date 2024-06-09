@@ -3,7 +3,7 @@ import gremlin from 'gremlin'
 // </imports>
 
 // <client>
-const credentials = new gremlin.driver.auth.PlainTextSaslAuthenticator(
+const authenticator = new gremlin.driver.auth.PlainTextSaslAuthenticator(
   '/dbs/db1/colls/coll1',
   'C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw=='
 )
@@ -11,7 +11,7 @@ const credentials = new gremlin.driver.auth.PlainTextSaslAuthenticator(
 const client = new gremlin.driver.Client(
   'ws://localhost:8901/',
   {
-    credentials,
+    authenticator,
     traversalsource: 'g',
     rejectUnauthorized: false,
     mimeType: 'application/vnd.gremlin-v2.0+json'

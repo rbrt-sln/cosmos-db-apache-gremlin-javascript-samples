@@ -8,7 +8,7 @@ const accountKey = process.env.COSMOS_GREMLIN_KEY
 // </environment_variables>
 
 // <authenticate_client>
-const credentials = new gremlin.driver.auth.PlainTextSaslAuthenticator(
+const authenticator = new gremlin.driver.auth.PlainTextSaslAuthenticator(
   '/dbs/cosmicworks/colls/products',
   `${accountKey}`
 )
@@ -18,7 +18,7 @@ const credentials = new gremlin.driver.auth.PlainTextSaslAuthenticator(
 const client = new gremlin.driver.Client(
   `wss://${accountName}.gremlin.cosmos.azure.com:443/`,
   {
-    credentials,
+    authenticator,
     traversalsource: 'g',
     rejectUnauthorized: true,
     mimeType: 'application/vnd.gremlin-v2.0+json'
