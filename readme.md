@@ -13,8 +13,8 @@ This repo has a [devcontainer](https://containers.dev) environment making it eas
 Configure your Azure Cosmos DB credentials as environment variables.
 
 ```bash
-export COSMOS_ENDPOINT="<cosmos-account-URI>"
-export COSMOS_KEY="<cosmos-account-PRIMARY-KEY>"
+export COSMOS_GREMLIN_ACCOUNT_NAME="<cosmos-account-NAME>"
+export COSMOS_GREMLIN_KEY="<cosmos-account-PRIMARY-KEY>"
 ```
 
 > **💡 TIP**: If you don't have an Azure Cosmos DB account, [create a free account](https://cosmos.azure.com/try/).

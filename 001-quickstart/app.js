@@ -3,7 +3,7 @@ import gremlin from 'gremlin'
 // </imports>
 
 // <environment_variables>
-const accountName = process.env.COSMOS_GREMLIN_ENDPOINT
+const accountName = process.env.COSMOS_GREMLIN_ACCOUNT_NAME
 const accountKey = process.env.COSMOS_GREMLIN_KEY
 // </environment_variables>
 
